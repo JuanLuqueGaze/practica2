@@ -37,6 +37,7 @@ ENTITY VGA_driver IS
         HS : OUT STD_LOGIC;
         RED : OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
         GRN : OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
+        modi : IN STD_LOGIC;
         BLU : OUT STD_LOGIC_VECTOR (3 DOWNTO 0));
 END VGA_driver;
 
@@ -78,6 +79,7 @@ ARCHITECTURE Behavioral OF VGA_driver IS
         PORT (
             eje_x : IN STD_LOGIC_VECTOR (9 DOWNTO 0);
             eje_y : IN STD_LOGIC_VECTOR (9 DOWNTO 0);
+            MODI : IN STD_LOGIC;
             RED : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
             GRN : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
             BLU : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
@@ -178,6 +180,7 @@ BEGIN
     PORT MAP(
         eje_x => eje_x,
         eje_y => eje_y,
+        MODI => modi,
         RED => REDI,
         GRN => GRNI,
         BLU => BLUI
