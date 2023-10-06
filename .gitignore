@@ -1,0 +1,8 @@
+**.rtl
+#**.xdc
+**.dcp
+*.sim
+*.runs
+*ip_user_files
+*.hv
+*.cache
